@@ -1,0 +1,66 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.11
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/indigo-dc/orchestrator-dashboard:
+      branch: main
+      repo: https://github.com/indigo-dc/orchestrator-dashboard
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/indigo-dc/orchestrator-dashboard git:
+        commands:
+        - /usr/bin/env sh .sqa/script.snippy-rust-capybara.sh
+        container: qc.acc_greasy-xanthic-setter
+  QC.Doc:
+    repos:
+      github.com/indigo-dc/orchestrator-dashboard find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.boozy-ultramarine-lionfish.sh
+        container: qc.doc_bumpy-beige-panda
+      github.com/indigo-dc/orchestrator-dashboard git:
+        commands:
+        - /usr/bin/env sh .sqa/script.fuzzy-chartreuse-oriole.sh
+        container: qc.doc_sleazy-tan-hedgehog
+      github.com/indigo-dc/orchestrator-dashboard markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.sloppy-sepia-harrier.sh
+        container: qc.doc_chewy-cinnabar-nightingale
+  QC.Lic:
+    repos:
+      github.com/indigo-dc/orchestrator-dashboard licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.wheezy-brown-mule.sh
+        container: qc.lic_shaggy-tomato-dolphin
+  QC.Sec:
+    repos:
+      github.com/indigo-dc/orchestrator-dashboard bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.trippy-chocolate-spider.sh
+        container: qc.sec_snoopy-cinnamon-akita
+  QC.Sty:
+    repos:
+      github.com/indigo-dc/orchestrator-dashboard flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.chewy-coral-slug.sh
+        container: qc.sty_wimpy-ochre-eleuth
+      github.com/indigo-dc/orchestrator-dashboard hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.snoopy-turquoise-dormouse.sh
+        container: qc.sty_muzzy-heliotrope-robin
+      github.com/indigo-dc/orchestrator-dashboard jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.fuzzy-pumpkin-bison.sh
+        container: qc.sty_homey-saffron-alligator
+  QC.Ver:
+    repos:
+      github.com/indigo-dc/orchestrator-dashboard get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.wiggy-lime-malamute.sh
+        container: qc.ver_wheezy-teal-rat
+timeout: 5400
