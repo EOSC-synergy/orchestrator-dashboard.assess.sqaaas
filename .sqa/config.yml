@@ -15,52 +15,52 @@ sqa_criteria:
     repos:
       github.com/indigo-dc/orchestrator-dashboard git:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-rust-capybara.sh
-        container: qc.acc_greasy-xanthic-setter
+        - /usr/bin/env sh .sqa/script.slaphappy-mustard-uakari.sh
+        container: qc.acc_nippy-black-worm
   QC.Doc:
     repos:
       github.com/indigo-dc/orchestrator-dashboard find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.boozy-ultramarine-lionfish.sh
-        container: qc.doc_bumpy-beige-panda
+        - /usr/bin/env sh .sqa/script.frumpy-rose-ray.sh
+        container: qc.doc_flimsy-goldenrod-opossum
       github.com/indigo-dc/orchestrator-dashboard git:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-chartreuse-oriole.sh
-        container: qc.doc_sleazy-tan-hedgehog
+        - /usr/bin/env sh .sqa/script.goopy-heliotrope-cheetah.sh
+        container: qc.doc_hazy-silver-flamingo
       github.com/indigo-dc/orchestrator-dashboard markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-sepia-harrier.sh
-        container: qc.doc_chewy-cinnabar-nightingale
+        - /usr/bin/env sh .sqa/script.geeky-rose-tarsier.sh
+        container: qc.doc_lovely-alizarin-jellyfish
   QC.Lic:
     repos:
       github.com/indigo-dc/orchestrator-dashboard licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-brown-mule.sh
-        container: qc.lic_shaggy-tomato-dolphin
+        - /usr/bin/env sh .sqa/script.trippy-harlequin-hyena.sh
+        container: qc.lic_skinny-puce-monkey
   QC.Sec:
     repos:
       github.com/indigo-dc/orchestrator-dashboard bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-chocolate-spider.sh
-        container: qc.sec_snoopy-cinnamon-akita
+        - /usr/bin/env sh .sqa/script.fuzzy-emerald-eleuth.sh
+        container: qc.sec_sleepy-pear-fossa
   QC.Sty:
     repos:
       github.com/indigo-dc/orchestrator-dashboard flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-coral-slug.sh
-        container: qc.sty_wimpy-ochre-eleuth
+        - /usr/bin/env sh .sqa/script.lovely-thistle-husky.sh
+        container: qc.sty_skanky-scarlet-crane
       github.com/indigo-dc/orchestrator-dashboard hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-turquoise-dormouse.sh
-        container: qc.sty_muzzy-heliotrope-robin
+        - /usr/bin/env sh .sqa/script.scummy-white-saola.sh
+        container: qc.sty_cranky-bistre-goat
       github.com/indigo-dc/orchestrator-dashboard jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-pumpkin-bison.sh
-        container: qc.sty_homey-saffron-alligator
+        - /usr/bin/env sh .sqa/script.scanty-chartreuse-hippopotamus.sh
+        container: qc.sty_gloppy-myrtle-cat
   QC.Ver:
     repos:
       github.com/indigo-dc/orchestrator-dashboard get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-lime-malamute.sh
-        container: qc.ver_wheezy-teal-rat
+        - /usr/bin/env sh .sqa/script.pasty-russet-dog.sh
+        container: qc.ver_skanky-alizarin-caterpillar
 timeout: 5400
