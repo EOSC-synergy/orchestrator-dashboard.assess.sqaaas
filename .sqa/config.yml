@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.11
+      branch: release/2.0.0
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/indigo-dc/orchestrator-dashboard:
       branch: main
@@ -15,52 +15,28 @@ sqa_criteria:
     repos:
       github.com/indigo-dc/orchestrator-dashboard git:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-mustard-uakari.sh
-        container: qc.acc_nippy-black-worm
+        - /usr/bin/env sh .sqa/script.surly-tangerine-rat.sh
+        container: qc.acc_lovely-brass-iguana
   QC.Doc:
     repos:
       github.com/indigo-dc/orchestrator-dashboard find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-rose-ray.sh
-        container: qc.doc_flimsy-goldenrod-opossum
+        - /usr/bin/env sh .sqa/script.beady-cardinal-hornet.sh
+        container: qc.doc_skinny-amethyst-tarantula
       github.com/indigo-dc/orchestrator-dashboard git:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-heliotrope-cheetah.sh
-        container: qc.doc_hazy-silver-flamingo
-      github.com/indigo-dc/orchestrator-dashboard markdownlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.geeky-rose-tarsier.sh
-        container: qc.doc_lovely-alizarin-jellyfish
+        - /usr/bin/env sh .sqa/script.sloppy-pumpkin-capybara.sh
+        container: qc.doc_skanky-denim-koala
   QC.Lic:
     repos:
       github.com/indigo-dc/orchestrator-dashboard licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-harlequin-hyena.sh
-        container: qc.lic_skinny-puce-monkey
-  QC.Sec:
-    repos:
-      github.com/indigo-dc/orchestrator-dashboard bandit:
-        commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-emerald-eleuth.sh
-        container: qc.sec_sleepy-pear-fossa
-  QC.Sty:
-    repos:
-      github.com/indigo-dc/orchestrator-dashboard flake8:
-        commands:
-        - /usr/bin/env sh .sqa/script.lovely-thistle-husky.sh
-        container: qc.sty_skanky-scarlet-crane
-      github.com/indigo-dc/orchestrator-dashboard hadolint:
-        commands:
-        - /usr/bin/env sh .sqa/script.scummy-white-saola.sh
-        container: qc.sty_cranky-bistre-goat
-      github.com/indigo-dc/orchestrator-dashboard jsonlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.scanty-chartreuse-hippopotamus.sh
-        container: qc.sty_gloppy-myrtle-cat
+        - /usr/bin/env sh .sqa/script.messy-saffron-forest.sh
+        container: qc.lic_shaky-razzmatazz-kangaroo
   QC.Ver:
     repos:
       github.com/indigo-dc/orchestrator-dashboard get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-russet-dog.sh
-        container: qc.ver_skanky-alizarin-caterpillar
+        - /usr/bin/env sh .sqa/script.scummy-charcoal-peccary.sh
+        container: qc.ver_beady-wisteria-bombay
 timeout: 5400
