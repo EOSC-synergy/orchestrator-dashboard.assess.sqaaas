@@ -15,28 +15,28 @@ sqa_criteria:
     repos:
       github.com/indigo-dc/orchestrator-dashboard git:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-tangerine-rat.sh
-        container: qc.acc_lovely-brass-iguana
+        - /usr/bin/env sh .sqa/script.whiny-orchid-armadillo.sh
+        container: qc.acc_flabby-flax-hornet
   QC.Doc:
     repos:
       github.com/indigo-dc/orchestrator-dashboard find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-cardinal-hornet.sh
-        container: qc.doc_skinny-amethyst-tarantula
+        - /usr/bin/env sh .sqa/script.silly-brown-meerkat.sh
+        container: qc.doc_woozy-persimmon-forest
       github.com/indigo-dc/orchestrator-dashboard git:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-pumpkin-capybara.sh
-        container: qc.doc_skanky-denim-koala
+        - /usr/bin/env sh .sqa/script.silly-amethyst-gecko.sh
+        container: qc.doc_flabby-ivory-cattle
   QC.Lic:
     repos:
       github.com/indigo-dc/orchestrator-dashboard licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.messy-saffron-forest.sh
-        container: qc.lic_shaky-razzmatazz-kangaroo
+        - /usr/bin/env sh .sqa/script.paltry-aqua-meerkat.sh
+        container: qc.lic_slaphappy-xanthic-squid
   QC.Ver:
     repos:
       github.com/indigo-dc/orchestrator-dashboard get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.scummy-charcoal-peccary.sh
-        container: qc.ver_beady-wisteria-bombay
+        - /usr/bin/env sh .sqa/script.shaggy-malachite-dalmatian.sh
+        container: qc.ver_woolly-pumpkin-gecko
 timeout: 5400
